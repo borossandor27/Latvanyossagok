@@ -1,0 +1,9 @@
+C:\Users\Sanyi\source\repos\LatvanyossagokApplication\LatvanyossagokApplication\bin\Debug\LatvanyossagokApplication.exe.config
+C:\Users\Sanyi\source\repos\LatvanyossagokApplication\LatvanyossagokApplication\bin\Debug\LatvanyossagokApplication.exe
+C:\Users\Sanyi\source\repos\LatvanyossagokApplication\LatvanyossagokApplication\bin\Debug\LatvanyossagokApplication.pdb
+C:\Users\Sanyi\source\repos\LatvanyossagokApplication\LatvanyossagokApplication\obj\Debug\LatvanyossagokApplication.csprojAssemblyReference.cache
+C:\Users\Sanyi\source\repos\LatvanyossagokApplication\LatvanyossagokApplication\obj\Debug\LatvanyossagokApplication.Form_Latvanyossagok.resources
+C:\Users\Sanyi\source\repos\LatvanyossagokApplication\LatvanyossagokApplication\obj\Debug\LatvanyossagokApplication.Properties.Resources.resources
+C:\Users\Sanyi\source\repos\LatvanyossagokApplication\LatvanyossagokApplication\obj\Debug\LatvanyossagokApplication.csproj.GenerateResource.cache
+C:\Users\Sanyi\source\repos\LatvanyossagokApplication\LatvanyossagokApplication\obj\Debug\LatvanyossagokApplication.exe
+C:\Users\Sanyi\source\repos\LatvanyossagokApplication\LatvanyossagokApplication\obj\Debug\LatvanyossagokApplication.pdb
