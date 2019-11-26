@@ -33,7 +33,7 @@
             this.listBox_Varosok = new System.Windows.Forms.ListBox();
             this.label_Varosnev = new System.Windows.Forms.Label();
             this.textBox_Varosnev = new System.Windows.Forms.TextBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.numeric_Lakossag = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.button_Varos_Insert = new System.Windows.Forms.Button();
             this.button_Varos_Update = new System.Windows.Forms.Button();
@@ -41,15 +41,15 @@
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.listBox_Latvanyossagok = new System.Windows.Forms.ListBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox_nevezetesseg = new System.Windows.Forms.TextBox();
+            this.textBox_Nevezetesseg_leiras = new System.Windows.Forms.TextBox();
             this.button_Latvanyossag_Insert = new System.Windows.Forms.Button();
             this.button_Latvanyossag_Update = new System.Windows.Forms.Button();
             this.button_Latvanyossag_Delete = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numeric_Lakossag)).BeginInit();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -90,14 +90,14 @@
             this.textBox_Varosnev.Size = new System.Drawing.Size(174, 20);
             this.textBox_Varosnev.TabIndex = 2;
             // 
-            // numericUpDown1
+            // numeric_Lakossag
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(240, 99);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(120, 20);
-            this.numericUpDown1.TabIndex = 3;
-            this.numericUpDown1.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.numericUpDown1.ThousandsSeparator = true;
+            this.numeric_Lakossag.Location = new System.Drawing.Point(240, 99);
+            this.numeric_Lakossag.Name = "numeric_Lakossag";
+            this.numeric_Lakossag.Size = new System.Drawing.Size(120, 20);
+            this.numeric_Lakossag.TabIndex = 3;
+            this.numeric_Lakossag.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numeric_Lakossag.ThousandsSeparator = true;
             // 
             // label1
             // 
@@ -116,6 +116,7 @@
             this.button_Varos_Insert.TabIndex = 5;
             this.button_Varos_Insert.Text = "Város rögzítése";
             this.button_Varos_Insert.UseVisualStyleBackColor = true;
+            this.button_Varos_Insert.Click += new System.EventHandler(this.button_Varos_Insert_Click);
             // 
             // button_Varos_Update
             // 
@@ -164,20 +165,20 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "A város nevezetessége";
             // 
-            // textBox1
+            // textBox_nevezetesseg
             // 
-            this.textBox1.Location = new System.Drawing.Point(645, 78);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(174, 20);
-            this.textBox1.TabIndex = 8;
+            this.textBox_nevezetesseg.Location = new System.Drawing.Point(645, 66);
+            this.textBox_nevezetesseg.Name = "textBox_nevezetesseg";
+            this.textBox_nevezetesseg.Size = new System.Drawing.Size(174, 20);
+            this.textBox_nevezetesseg.TabIndex = 8;
             // 
-            // textBox2
+            // textBox_Nevezetesseg_leiras
             // 
-            this.textBox2.Location = new System.Drawing.Point(645, 122);
-            this.textBox2.Multiline = true;
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(174, 126);
-            this.textBox2.TabIndex = 9;
+            this.textBox_Nevezetesseg_leiras.Location = new System.Drawing.Point(645, 122);
+            this.textBox_Nevezetesseg_leiras.Multiline = true;
+            this.textBox_Nevezetesseg_leiras.Name = "textBox_Nevezetesseg_leiras";
+            this.textBox_Nevezetesseg_leiras.Size = new System.Drawing.Size(174, 126);
+            this.textBox_Nevezetesseg_leiras.TabIndex = 9;
             // 
             // button_Latvanyossag_Insert
             // 
@@ -230,8 +231,8 @@
             this.ClientSize = new System.Drawing.Size(846, 450);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBox_Nevezetesseg_leiras);
+            this.Controls.Add(this.textBox_nevezetesseg);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.button_Latvanyossag_Delete);
@@ -241,15 +242,16 @@
             this.Controls.Add(this.button_Varos_Update);
             this.Controls.Add(this.button_Varos_Insert);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.numeric_Lakossag);
             this.Controls.Add(this.textBox_Varosnev);
             this.Controls.Add(this.label_Varosnev);
             this.Controls.Add(this.groupBox1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form_Latvanyossagok";
             this.Text = "LatvanyossagokApplication";
+            this.Load += new System.EventHandler(this.Form_Latvanyossagok_Load);
             this.groupBox1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numeric_Lakossag)).EndInit();
             this.groupBox2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
@@ -263,7 +265,7 @@
         private System.Windows.Forms.ListBox listBox_Varosok;
         private System.Windows.Forms.Label label_Varosnev;
         private System.Windows.Forms.TextBox textBox_Varosnev;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown numeric_Lakossag;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button_Varos_Insert;
         private System.Windows.Forms.Button button_Varos_Update;
@@ -271,8 +273,8 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.ListBox listBox_Latvanyossagok;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox_nevezetesseg;
+        private System.Windows.Forms.TextBox textBox_Nevezetesseg_leiras;
         private System.Windows.Forms.Button button_Latvanyossag_Insert;
         private System.Windows.Forms.Button button_Latvanyossag_Update;
         private System.Windows.Forms.Button button_Latvanyossag_Delete;
