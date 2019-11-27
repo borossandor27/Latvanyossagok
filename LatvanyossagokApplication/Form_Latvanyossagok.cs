@@ -14,6 +14,8 @@ namespace LatvanyossagokApplication
     
     public partial class Form_Latvanyossagok : Form
     {
+        Varos KivalasztottVaros = null;
+        Latvanyossag KivalasztottLatvanyossag = null;
         public Form_Latvanyossagok()
         {
             InitializeComponent();
@@ -34,26 +36,45 @@ namespace LatvanyossagokApplication
                 MessageBox.Show("Kérem adja meg a lakosok számát!", "Hiányos adat!", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            MySqlCommand sql = Program.conn.CreateCommand();
             try
             {
-                Program.conn.Open();
-                MySqlCommand sql = Program.conn.CreateCommand();
-                sql.CommandText = "SELECT COUNT(*) FROM varosok WHERE varosok.nev = '@varosnev' LIMIT 10 ";
-                sql.Parameters.AddWithValue("@varosnev", VarosNeve);
-                if (sql.ExecuteScalar() != DBNull.Value)
-                {
-                    MessageBox.Show(VarosNeve + " már szerepel az adatbázisban!", "Hiányos adat!", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
+                //-- Ha nem lenne a városnév UNIQ, akkor ...
+                //Program.conn.Open();
+                //sql.CommandText = "SELECT COUNT(*) FROM varosok WHERE varosok.nev = '@varosnev' LIMIT 10 ";
+                //sql.Parameters.AddWithValue("@varosnev", VarosNeve);
+                //int db = Convert.ToInt32(sql.ExecuteScalar());
+                //if ( db > 0)
+                //{
+                //    MessageBox.Show(VarosNeve + " nevű település már szerepel az adatbázisban!", "Nem megfelelő bemeneti adat!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //    return;
+                //}
+                //Program.conn.Close();
                 //-- Beszúrás ----------------------------------------------------
-                sql.CommandText = "INSERT INTO `varosok` (`id`, `nev`, `lakossag`) VALUES (NULL, '@varos', '@lakossag');";
+                Program.conn.Open();
+                sql.CommandText = "INSERT INTO `varosok` (`id`, `nev`, `lakossag`) VALUES (NULL, @varos, @lakossag);";
                 sql.Parameters.AddWithValue("@varos", VarosNeve);
                 sql.Parameters.AddWithValue("@lakossag", lakossag);
                 if (sql.ExecuteNonQuery() != 1)
                 {
                     MessageBox.Show("A város adatbázisba írása sikertelen!");
                 }
-
+                Program.conn.Close();
+                textBox_Varosnev.Text = "";
+                numeric_Lakossag.Value = numeric_Lakossag.Minimum;
+                VaroslistaUpdate();
+            } 
+            catch(MySqlException myex)
+            {
+                if (myex.Number == 1062)
+                {
+                    //-- duplicate entry -----------------------------------------------
+                    MessageBox.Show(VarosNeve + " nevű település már szerepel az adatbázisban!", "Nem megfelelő bemeneti adat!", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MessageBox.Show(myex.Message);
+                }
             }
             catch (Exception ex)
             {
@@ -61,7 +82,7 @@ namespace LatvanyossagokApplication
             }
             finally
             {
-                if (Program.conn.State == ConnectionState.Open)
+                if (Program.conn.State != null && Program.conn.State != ConnectionState.Closed)
                 {
                     Program.conn.Close();
                 }
@@ -81,19 +102,53 @@ namespace LatvanyossagokApplication
             {
                 MySqlCommand sql = Program.conn.CreateCommand();
                 sql.CommandText = "SELECT `id`, `nev`, `lakossag` FROM `varosok` ORDER BY `nev`;";
+                Program.conn.Open();
                 MySqlDataReader reader = sql.ExecuteReader();
                 while (reader.Read())
                 {
-                    int id = reader.GetInt32(0);
-                    string varos = reader.GetString(1);
-                    int lakossag = reader.GetInt32(2);
-                    listBox_Varosok.Items.Add(new Varos(id, varos, lakossag));
+                    listBox_Varosok.Items.Add(new Varos(reader.GetInt32(0), reader.GetString(1), reader.GetInt32(2)));
                 }
+                reader.Close();
+                Program.conn.Close();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
+        }
+
+        private void listBox_Varosok_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            KivalasztottVaros = (Varos)listBox_Varosok.SelectedItem;
+            textBox_Varosnev.Text = KivalasztottVaros.Nev;
+            numeric_Lakossag.Value = KivalasztottVaros.Lakossag;
+            LatnivalolistaUpdate();
+            groupBox_Latnivalok.Text = KivalasztottVaros.Nev + " látnivalói";
+            label_Varos_nevezetesseg.Text = KivalasztottVaros.Nev + " nevezetessége";
+        }
+
+        private void LatnivalolistaUpdate()
+        {
+            listBox_Latvanyossagok.Items.Clear();
+            MySqlCommand sql = Program.conn.CreateCommand();
+            sql.CommandText = "SELECT `id`,`nev`,`leiras`,`ar`,`varos_id` FROM `latvanyossagok` WHERE `varos_id` = @id ;";
+            sql.Parameters.AddWithValue("@id", KivalasztottVaros.Id);
+            Program.conn.Open();
+            MySqlDataReader reader = sql.ExecuteReader();
+            while (reader.Read())
+            {
+                Latvanyossag uj = new Latvanyossag(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetInt32(3), reader.GetInt32(4));
+                listBox_Latvanyossagok.Items.Add(uj);
+            }
+            reader.Close();
+            Program.conn.Close();
+        }
+
+        private void listBox_Latvanyossagok_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            KivalasztottLatvanyossag = (Latvanyossag)listBox_Latvanyossagok.SelectedItem;
+            textBox_nevezetesseg.Text = KivalasztottLatvanyossag.Nev;
+            textBox_Nevezetesseg_leiras.Text = KivalasztottLatvanyossag.Leiras;
         }
     }
 }

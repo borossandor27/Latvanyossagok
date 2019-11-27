@@ -52,10 +52,10 @@ namespace LatvanyossagokApplication
                 MessageBox.Show(ex.Message);
                 return;
             }
+            conn.Close();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form_Latvanyossagok());
-            conn.Close();
         }
     }
 }

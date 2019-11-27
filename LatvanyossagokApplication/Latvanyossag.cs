@@ -17,17 +17,20 @@ namespace LatvanyossagokApplication
         public Latvanyossag(int id, string nev, string leiras, int ar, int varos_id)
         {
             this.Id = id;
-            this.nev = nev;
-            this.leiras = leiras;
-            this.ar = ar;
+            this.Nev = nev;
+            this.Leiras = leiras;
+            this.Ar = ar;
             this.varos_id = varos_id;
         }
 
         public int Id { get => id; set => id = value; }
+        public string Nev { get => nev; set => nev = value; }
+        public string Leiras { get => leiras; set => leiras = value; }
+        public int Ar { get => ar; set => ar = value; }
 
         public override string ToString()
         {
-            return $"{nev} - {ar} Ft";
+            return $"{Nev} - {Ar} Ft";
         }
     }
 }
