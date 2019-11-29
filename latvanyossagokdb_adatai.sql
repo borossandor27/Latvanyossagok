@@ -1,27 +1,45 @@
+-- phpMyAdmin SQL Dump
+-- version 4.8.2
+-- https://www.phpmyadmin.net/
+--
+-- Gép: 127.0.0.1:3307
+-- Létrehozás ideje: 2019. Nov 29. 15:28
+-- Kiszolgáló verziója: 10.1.34-MariaDB
+-- PHP verzió: 7.2.8
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
 --
 -- Adatbázis: `latvanyossagokdb`
 --
+CREATE DATABASE IF NOT EXISTS `latvanyossagokdb` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `latvanyossagokdb`;
+
+-- --------------------------------------------------------
+
 --
--- A tábla adatainak kiíratása `varosok`
+-- Tábla szerkezet ehhez a táblához `latvanyossagok`
 --
 
-INSERT INTO `varosok` (`id`, `nev`, `lakossag`) VALUES
-(1, 'Balatongyörök', 1383),
-(2, 'Bókaháza', 263),
-(3, 'Esztergályhorváti', 429),
-(4, 'Gétye', 112),
-(5, 'Gyenesdiás', 3667),
-(6, 'Karmacs', 783),
-(7, 'Keszthely', 19652),
-(8, 'Szentgyörgyvár', 324),
-(9, 'Vállus', 127),
-(10, 'Várvölgy', 1043),
-(11, 'Vindornyafok ', 131),
-(12, 'Vindornyalak', 85),
-(13, 'Vonyarcvashegy', 2273),
-(14, 'Zalaapáti', 1671),
-(15, 'Zalaszántó', 941),
-(16, 'Zalavár', 959);
+DROP TABLE IF EXISTS `latvanyossagok`;
+CREATE TABLE IF NOT EXISTS `latvanyossagok` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nev` varchar(100) NOT NULL,
+  `leiras` varchar(255) NOT NULL,
+  `ar` int(11) NOT NULL DEFAULT '0',
+  `varos_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_varos_latvanyossag` (`varos_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=154 DEFAULT CHARSET=utf8;
 
 --
 -- A tábla adatainak kiíratása `latvanyossagok`
@@ -184,4 +202,52 @@ INSERT INTO `latvanyossagok` (`id`, `nev`, `leiras`, `ar`, `varos_id`) VALUES
 
 -- --------------------------------------------------------
 
+--
+-- Tábla szerkezet ehhez a táblához `varosok`
+--
 
+DROP TABLE IF EXISTS `varosok`;
+CREATE TABLE IF NOT EXISTS `varosok` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `nev` varchar(100) NOT NULL,
+  `lakossag` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `nev` (`nev`)
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
+
+--
+-- A tábla adatainak kiíratása `varosok`
+--
+
+INSERT INTO `varosok` (`id`, `nev`, `lakossag`) VALUES
+(1, 'Balatongyörök', 1383),
+(2, 'Bókaháza', 263),
+(3, 'Esztergályhorváti', 429),
+(4, 'Gétye', 112),
+(5, 'Gyenesdiás', 3667),
+(6, 'Karmacs', 783),
+(7, 'Keszthely', 19652),
+(8, 'Szentgyörgyvár', 324),
+(9, 'Vállus', 127),
+(10, 'Várvölgy', 1043),
+(11, 'Vindornyafok ', 131),
+(12, 'Vindornyalak', 85),
+(13, 'Vonyarcvashegy', 2273),
+(14, 'Zalaapáti', 1671),
+(15, 'Zalaszántó', 941),
+(16, 'Zalavár', 959);
+
+--
+-- Megkötések a kiírt táblákhoz
+--
+
+--
+-- Megkötések a táblához `latvanyossagok`
+--
+ALTER TABLE `latvanyossagok`
+  ADD CONSTRAINT `fk_varos_latvanyossag` FOREIGN KEY (`varos_id`) REFERENCES `varosok` (`id`);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

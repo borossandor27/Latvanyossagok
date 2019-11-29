@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.3
+-- version 4.8.2
 -- https://www.phpmyadmin.net/
 --
--- Gép: 127.0.0.1
--- Létrehozás ideje: 2019. Nov 25. 22:14
--- Kiszolgáló verziója: 10.1.36-MariaDB
--- PHP verzió: 7.2.11
+-- Gép: 127.0.0.1:3307
+-- Létrehozás ideje: 2019. Nov 29. 15:08
+-- Kiszolgáló verziója: 10.1.34-MariaDB
+-- PHP verzió: 7.2.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -21,6 +21,8 @@ SET time_zone = "+00:00";
 --
 -- Adatbázis: `latvanyossagokdb`
 --
+CREATE DATABASE IF NOT EXISTS `latvanyossagokdb` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
+USE `latvanyossagokdb`;
 
 -- --------------------------------------------------------
 
@@ -28,12 +30,15 @@ SET time_zone = "+00:00";
 -- Tábla szerkezet ehhez a táblához `latvanyossagok`
 --
 
-CREATE TABLE `latvanyossagok` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `latvanyossagok`;
+CREATE TABLE IF NOT EXISTS `latvanyossagok` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `nev` varchar(100) NOT NULL,
   `leiras` varchar(255) NOT NULL,
   `ar` int(11) NOT NULL DEFAULT '0',
-  `varos_id` int(11) NOT NULL
+  `varos_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_varos_latvanyossag` (`varos_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -42,45 +47,14 @@ CREATE TABLE `latvanyossagok` (
 -- Tábla szerkezet ehhez a táblához `varosok`
 --
 
-CREATE TABLE `varosok` (
-  `id` int(11) NOT NULL,
+DROP TABLE IF EXISTS `varosok`;
+CREATE TABLE IF NOT EXISTS `varosok` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `nev` varchar(100) NOT NULL,
-  `lakossag` int(11) NOT NULL
+  `lakossag` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `nev` (`nev`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
---
--- Indexek a kiírt táblákhoz
---
-
---
--- A tábla indexei `latvanyossagok`
---
-ALTER TABLE `latvanyossagok`
-  ADD PRIMARY KEY (`id`),
-  ADD KEY `fk_varos_latvanyossag` (`varos_id`);
-
---
--- A tábla indexei `varosok`
---
-ALTER TABLE `varosok`
-  ADD PRIMARY KEY (`id`),
-  ADD UNIQUE KEY `nev` (`nev`);
-
---
--- A kiírt táblák AUTO_INCREMENT értéke
---
-
---
--- AUTO_INCREMENT a táblához `latvanyossagok`
---
-ALTER TABLE `latvanyossagok`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT a táblához `varosok`
---
-ALTER TABLE `varosok`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Megkötések a kiírt táblákhoz

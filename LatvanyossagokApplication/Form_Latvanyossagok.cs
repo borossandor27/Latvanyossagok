@@ -134,13 +134,14 @@ namespace LatvanyossagokApplication
             sql.CommandText = "SELECT `id`,`nev`,`leiras`,`ar`,`varos_id` FROM `latvanyossagok` WHERE `varos_id` = @id ;";
             sql.Parameters.AddWithValue("@id", KivalasztottVaros.Id);
             Program.conn.Open();
-            MySqlDataReader reader = sql.ExecuteReader();
-            while (reader.Read())
+            using (MySqlDataReader reader = sql.ExecuteReader())
             {
-                Latvanyossag uj = new Latvanyossag(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetInt32(3), reader.GetInt32(4));
-                listBox_Latvanyossagok.Items.Add(uj);
+                while (reader.Read())
+                {
+                    Latvanyossag uj = new Latvanyossag(reader.GetInt32(0), reader.GetString(1), reader.GetString(2), reader.GetInt32(3), reader.GetInt32(4));
+                    listBox_Latvanyossagok.Items.Add(uj);
+                }
             }
-            reader.Close();
             Program.conn.Close();
         }
 
@@ -149,6 +150,32 @@ namespace LatvanyossagokApplication
             KivalasztottLatvanyossag = (Latvanyossag)listBox_Latvanyossagok.SelectedItem;
             textBox_nevezetesseg.Text = KivalasztottLatvanyossag.Nev;
             textBox_Nevezetesseg_leiras.Text = KivalasztottLatvanyossag.Leiras;
+        }
+
+        private void button_Latvanyossag_Insert_Click(object sender, EventArgs e)
+        {
+            if (listBox_Varosok.SelectedIndex == -1)
+            {
+                MessageBox.Show("Kérem válassza ki a várost!");
+                return;
+            }
+            MySqlCommand sql = Program.conn.CreateCommand();
+            sql.CommandText = "INSERT INTO `latvanyossagok` (`id`, `nev`, `leiras`, `ar`, `varos_id`) VALUES (NULL, '@nev', '@leiras', '@ar', '@varosid');";
+            sql.Parameters.AddWithValue("@nev", textBox_nevezetesseg.Text.Trim());
+            sql.Parameters.AddWithValue("@leiras", textBox_Nevezetesseg_leiras.Text.Trim());
+            sql.Parameters.AddWithValue("@ar", Convert.ToInt32(numeric_Latvanyossag_ar.Value));
+            sql.Parameters.AddWithValue("@varosid", KivalasztottVaros.Id);
+            try
+            {
+                Program.conn.Open();
+                sql.ExecuteNonQuery();
+                Program.conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
         }
     }
 }

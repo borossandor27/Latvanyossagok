@@ -20,18 +20,26 @@ namespace LatvanyossagokApplication
             sb.Server = "localhost";
             sb.UserID = "root";
             sb.Password = "";
-            sb.Database = "latvanyossagokdb";
+            sb.Port = 3307;
+            //sb.Database = "latvanyossagokdb";
             sb.CharacterSet = "utf8";
             conn = new MySqlConnection(sb.ToString());
             try
             {
                 conn.Open();
+                MySqlCommand sql = conn.CreateCommand();
+                sql.CommandText = "CREATE DATABASE IF NOT EXISTS `latvanyossagokdb` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;";
+                sql.ExecuteNonQuery();
+                sql.CommandText = "USE `latvanyossagokdb`;";
+                sql.ExecuteNonQuery();
                 string CreateVarosok = "CREATE TABLE IF NOT EXISTS `varosok` (" +
                     "`id` int(11) NOT NULL AUTO_INCREMENT,  " +
                     "`nev` varchar(100) NOT NULL,  " +
                     "`lakossag` int(11) NOT NULL,  " +
                     "PRIMARY KEY(`id`),  " +
                     "UNIQUE KEY `nev` (`nev`)) ENGINE = InnoDB DEFAULT CHARSET = utf8; ";
+                sql.CommandText = CreateVarosok;
+                sql.ExecuteNonQuery();
                 string CreateLatvanyossagok = "CREATE TABLE IF NOT EXISTS `latvanyossagok` ( " +
                     "`id` int(11) NOT NULL AUTO_INCREMENT, " +
                     "`nev` varchar(100) NOT NULL, " +
@@ -41,9 +49,6 @@ namespace LatvanyossagokApplication
                     "PRIMARY KEY (`id`), " +
                     "FOREIGN KEY (`varos_id`) REFERENCES `varosok` (`id`) " +
                     ") ENGINE=InnoDB DEFAULT CHARSET=utf8";
-                MySqlCommand sql = conn.CreateCommand();
-                sql.CommandText = CreateVarosok;
-                sql.ExecuteNonQuery();
                 sql.CommandText = CreateLatvanyossagok;
                 sql.ExecuteNonQuery();
             }
