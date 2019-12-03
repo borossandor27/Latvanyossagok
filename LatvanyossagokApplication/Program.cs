@@ -20,7 +20,7 @@ namespace LatvanyossagokApplication
             sb.Server = "localhost";
             sb.UserID = "root";
             sb.Password = "";
-            sb.Port = 3307;
+            //sb.Port = 3307;
             //sb.Database = "latvanyossagokdb";
             sb.CharacterSet = "utf8";
             conn = new MySqlConnection(sb.ToString());
