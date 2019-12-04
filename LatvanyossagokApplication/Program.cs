@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -10,9 +12,7 @@ namespace LatvanyossagokApplication
     static class Program
     {
         public static MySqlConnection conn = null;
-        /// <summary>
-        /// The main entry point for the application.
-        /// </summary>
+ 
         [STAThread]
         static void Main()
         {
@@ -62,5 +62,17 @@ namespace LatvanyossagokApplication
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form_Latvanyossagok());
         }
+
+        public static string FirstCharToUpper(this string input)  
+        {
+            return char.ToUpper(input.First()) + input.Substring(1).ToLower();
+        }
+        public static Image ByteArrayToImage(byte[] byteArrayIn)
+        {
+            MemoryStream ms = new MemoryStream(byteArrayIn);
+            Image returnImage = Image.FromStream(ms);
+            return returnImage;
+        }
     }
 }
+

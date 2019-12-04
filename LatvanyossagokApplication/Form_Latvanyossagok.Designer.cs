@@ -30,34 +30,37 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_Latvanyossagok));
             this.groupBox_Varosok = new System.Windows.Forms.GroupBox();
-            this.listBox_Varosok = new System.Windows.Forms.ListBox();
+            this.panel_Varosadatok = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.button_Cimer_feltoltese = new System.Windows.Forms.Button();
+            this.button_Varos_Delete = new System.Windows.Forms.Button();
+            this.pictureBox_Cimer = new System.Windows.Forms.PictureBox();
             this.label_Varosnev = new System.Windows.Forms.Label();
             this.textBox_Varosnev = new System.Windows.Forms.TextBox();
             this.numeric_Lakossag = new System.Windows.Forms.NumericUpDown();
             this.label1 = new System.Windows.Forms.Label();
             this.button_Varos_Insert = new System.Windows.Forms.Button();
             this.button_Varos_Update = new System.Windows.Forms.Button();
-            this.button_Varos_Delete = new System.Windows.Forms.Button();
+            this.listBox_Varosok = new System.Windows.Forms.ListBox();
             this.groupBox_Latnivalok = new System.Windows.Forms.GroupBox();
-            this.listBox_Latvanyossagok = new System.Windows.Forms.ListBox();
-            this.label_Varos_nevezetesseg = new System.Windows.Forms.Label();
-            this.textBox_nevezetesseg = new System.Windows.Forms.TextBox();
-            this.textBox_Nevezetesseg_leiras = new System.Windows.Forms.TextBox();
-            this.button_Latvanyossag_Insert = new System.Windows.Forms.Button();
-            this.button_Latvanyossag_Update = new System.Windows.Forms.Button();
-            this.button_Latvanyossag_Delete = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.pictureBox_Cimer = new System.Windows.Forms.PictureBox();
-            this.panel_Varosadatok = new System.Windows.Forms.Panel();
             this.panel_Latvanyossagadatok = new System.Windows.Forms.Panel();
-            this.numeric_Latvanyossag_ar = new System.Windows.Forms.NumericUpDown();
-            this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.numeric_Latvanyossag_ar = new System.Windows.Forms.NumericUpDown();
+            this.button_Latvanyossag_Insert = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.button_Latvanyossag_Update = new System.Windows.Forms.Button();
+            this.textBox_Nevezetesseg_leiras = new System.Windows.Forms.TextBox();
+            this.button_Latvanyossag_Delete = new System.Windows.Forms.Button();
+            this.textBox_nevezetesseg = new System.Windows.Forms.TextBox();
+            this.label_Varos_nevezetesseg = new System.Windows.Forms.Label();
+            this.listBox_Latvanyossagok = new System.Windows.Forms.ListBox();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.groupBox_Varosok.SuspendLayout();
+            this.panel_Varosadatok.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Cimer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numeric_Lakossag)).BeginInit();
             this.groupBox_Latnivalok.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Cimer)).BeginInit();
-            this.panel_Varosadatok.SuspendLayout();
             this.panel_Latvanyossagadatok.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numeric_Latvanyossag_ar)).BeginInit();
             this.SuspendLayout();
@@ -73,16 +76,61 @@
             this.groupBox_Varosok.TabStop = false;
             this.groupBox_Varosok.Text = "Városok";
             // 
-            // listBox_Varosok
+            // panel_Varosadatok
             // 
-            this.listBox_Varosok.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox_Varosok.Dock = System.Windows.Forms.DockStyle.Left;
-            this.listBox_Varosok.FormattingEnabled = true;
-            this.listBox_Varosok.Location = new System.Drawing.Point(3, 16);
-            this.listBox_Varosok.Name = "listBox_Varosok";
-            this.listBox_Varosok.Size = new System.Drawing.Size(384, 406);
-            this.listBox_Varosok.TabIndex = 0;
-            this.listBox_Varosok.SelectedIndexChanged += new System.EventHandler(this.listBox_Varosok_SelectedIndexChanged);
+            this.panel_Varosadatok.Controls.Add(this.label5);
+            this.panel_Varosadatok.Controls.Add(this.button_Cimer_feltoltese);
+            this.panel_Varosadatok.Controls.Add(this.button_Varos_Delete);
+            this.panel_Varosadatok.Controls.Add(this.pictureBox_Cimer);
+            this.panel_Varosadatok.Controls.Add(this.label_Varosnev);
+            this.panel_Varosadatok.Controls.Add(this.textBox_Varosnev);
+            this.panel_Varosadatok.Controls.Add(this.numeric_Lakossag);
+            this.panel_Varosadatok.Controls.Add(this.label1);
+            this.panel_Varosadatok.Controls.Add(this.button_Varos_Insert);
+            this.panel_Varosadatok.Controls.Add(this.button_Varos_Update);
+            this.panel_Varosadatok.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel_Varosadatok.Location = new System.Drawing.Point(276, 16);
+            this.panel_Varosadatok.Name = "panel_Varosadatok";
+            this.panel_Varosadatok.Size = new System.Drawing.Size(200, 406);
+            this.panel_Varosadatok.TabIndex = 13;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(171, 84);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(16, 13);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "fő";
+            // 
+            // button_Cimer_feltoltese
+            // 
+            this.button_Cimer_feltoltese.Location = new System.Drawing.Point(16, 365);
+            this.button_Cimer_feltoltese.Name = "button_Cimer_feltoltese";
+            this.button_Cimer_feltoltese.Size = new System.Drawing.Size(171, 23);
+            this.button_Cimer_feltoltese.TabIndex = 5;
+            this.button_Cimer_feltoltese.Text = "Cimer feltöltése";
+            this.button_Cimer_feltoltese.UseVisualStyleBackColor = true;
+            this.button_Cimer_feltoltese.Click += new System.EventHandler(this.button_Cimer_feltoltese_Click);
+            // 
+            // button_Varos_Delete
+            // 
+            this.button_Varos_Delete.Location = new System.Drawing.Point(12, 187);
+            this.button_Varos_Delete.Name = "button_Varos_Delete";
+            this.button_Varos_Delete.Size = new System.Drawing.Size(171, 23);
+            this.button_Varos_Delete.TabIndex = 5;
+            this.button_Varos_Delete.Text = "Kiválasztott törlése";
+            this.button_Varos_Delete.UseVisualStyleBackColor = true;
+            this.button_Varos_Delete.Click += new System.EventHandler(this.button_Varos_Delete_Click);
+            // 
+            // pictureBox_Cimer
+            // 
+            this.pictureBox_Cimer.Location = new System.Drawing.Point(30, 228);
+            this.pictureBox_Cimer.Name = "pictureBox_Cimer";
+            this.pictureBox_Cimer.Size = new System.Drawing.Size(138, 122);
+            this.pictureBox_Cimer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_Cimer.TabIndex = 11;
+            this.pictureBox_Cimer.TabStop = false;
             // 
             // label_Varosnev
             // 
@@ -102,7 +150,7 @@
             // 
             // numeric_Lakossag
             // 
-            this.numeric_Lakossag.Location = new System.Drawing.Point(63, 82);
+            this.numeric_Lakossag.Location = new System.Drawing.Point(48, 82);
             this.numeric_Lakossag.Maximum = new decimal(new int[] {
             10000000,
             0,
@@ -135,7 +183,7 @@
             // 
             // button_Varos_Insert
             // 
-            this.button_Varos_Insert.Location = new System.Drawing.Point(12, 129);
+            this.button_Varos_Insert.Location = new System.Drawing.Point(12, 120);
             this.button_Varos_Insert.Name = "button_Varos_Insert";
             this.button_Varos_Insert.Size = new System.Drawing.Size(171, 23);
             this.button_Varos_Insert.TabIndex = 3;
@@ -145,21 +193,24 @@
             // 
             // button_Varos_Update
             // 
-            this.button_Varos_Update.Location = new System.Drawing.Point(12, 169);
+            this.button_Varos_Update.Location = new System.Drawing.Point(12, 151);
             this.button_Varos_Update.Name = "button_Varos_Update";
             this.button_Varos_Update.Size = new System.Drawing.Size(171, 23);
             this.button_Varos_Update.TabIndex = 4;
             this.button_Varos_Update.Text = "Kiválasztott módosítása";
             this.button_Varos_Update.UseVisualStyleBackColor = true;
+            this.button_Varos_Update.Click += new System.EventHandler(this.button_Varos_Update_Click);
             // 
-            // button_Varos_Delete
+            // listBox_Varosok
             // 
-            this.button_Varos_Delete.Location = new System.Drawing.Point(12, 208);
-            this.button_Varos_Delete.Name = "button_Varos_Delete";
-            this.button_Varos_Delete.Size = new System.Drawing.Size(171, 23);
-            this.button_Varos_Delete.TabIndex = 5;
-            this.button_Varos_Delete.Text = "Törlés";
-            this.button_Varos_Delete.UseVisualStyleBackColor = true;
+            this.listBox_Varosok.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox_Varosok.Dock = System.Windows.Forms.DockStyle.Left;
+            this.listBox_Varosok.FormattingEnabled = true;
+            this.listBox_Varosok.Location = new System.Drawing.Point(3, 16);
+            this.listBox_Varosok.Name = "listBox_Varosok";
+            this.listBox_Varosok.Size = new System.Drawing.Size(384, 406);
+            this.listBox_Varosok.TabIndex = 0;
+            this.listBox_Varosok.SelectedIndexChanged += new System.EventHandler(this.listBox_Varosok_SelectedIndexChanged);
             // 
             // groupBox_Latnivalok
             // 
@@ -171,102 +222,6 @@
             this.groupBox_Latnivalok.TabIndex = 6;
             this.groupBox_Latnivalok.TabStop = false;
             this.groupBox_Latnivalok.Text = "A város látnivalói";
-            // 
-            // listBox_Latvanyossagok
-            // 
-            this.listBox_Latvanyossagok.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.listBox_Latvanyossagok.Dock = System.Windows.Forms.DockStyle.Left;
-            this.listBox_Latvanyossagok.FormattingEnabled = true;
-            this.listBox_Latvanyossagok.Location = new System.Drawing.Point(3, 16);
-            this.listBox_Latvanyossagok.Name = "listBox_Latvanyossagok";
-            this.listBox_Latvanyossagok.Size = new System.Drawing.Size(325, 406);
-            this.listBox_Latvanyossagok.TabIndex = 0;
-            this.listBox_Latvanyossagok.SelectedIndexChanged += new System.EventHandler(this.listBox_Latvanyossagok_SelectedIndexChanged);
-            // 
-            // label_Varos_nevezetesseg
-            // 
-            this.label_Varos_nevezetesseg.AutoSize = true;
-            this.label_Varos_nevezetesseg.Location = new System.Drawing.Point(33, 8);
-            this.label_Varos_nevezetesseg.Name = "label_Varos_nevezetesseg";
-            this.label_Varos_nevezetesseg.Size = new System.Drawing.Size(118, 13);
-            this.label_Varos_nevezetesseg.TabIndex = 7;
-            this.label_Varos_nevezetesseg.Text = "A város nevezetessége";
-            // 
-            // textBox_nevezetesseg
-            // 
-            this.textBox_nevezetesseg.Location = new System.Drawing.Point(33, 26);
-            this.textBox_nevezetesseg.Name = "textBox_nevezetesseg";
-            this.textBox_nevezetesseg.Size = new System.Drawing.Size(174, 20);
-            this.textBox_nevezetesseg.TabIndex = 6;
-            // 
-            // textBox_Nevezetesseg_leiras
-            // 
-            this.textBox_Nevezetesseg_leiras.Location = new System.Drawing.Point(33, 82);
-            this.textBox_Nevezetesseg_leiras.Multiline = true;
-            this.textBox_Nevezetesseg_leiras.Name = "textBox_Nevezetesseg_leiras";
-            this.textBox_Nevezetesseg_leiras.Size = new System.Drawing.Size(174, 126);
-            this.textBox_Nevezetesseg_leiras.TabIndex = 9;
-            // 
-            // button_Latvanyossag_Insert
-            // 
-            this.button_Latvanyossag_Insert.Location = new System.Drawing.Point(36, 264);
-            this.button_Latvanyossag_Insert.Name = "button_Latvanyossag_Insert";
-            this.button_Latvanyossag_Insert.Size = new System.Drawing.Size(171, 23);
-            this.button_Latvanyossag_Insert.TabIndex = 10;
-            this.button_Latvanyossag_Insert.Text = "Látványosság rögzítése";
-            this.button_Latvanyossag_Insert.UseVisualStyleBackColor = true;
-            this.button_Latvanyossag_Insert.Click += new System.EventHandler(this.button_Latvanyossag_Insert_Click);
-            // 
-            // button_Latvanyossag_Update
-            // 
-            this.button_Latvanyossag_Update.Location = new System.Drawing.Point(36, 304);
-            this.button_Latvanyossag_Update.Name = "button_Latvanyossag_Update";
-            this.button_Latvanyossag_Update.Size = new System.Drawing.Size(171, 23);
-            this.button_Latvanyossag_Update.TabIndex = 11;
-            this.button_Latvanyossag_Update.Text = "Kiválasztott módosítása";
-            this.button_Latvanyossag_Update.UseVisualStyleBackColor = true;
-            // 
-            // button_Latvanyossag_Delete
-            // 
-            this.button_Latvanyossag_Delete.Location = new System.Drawing.Point(36, 343);
-            this.button_Latvanyossag_Delete.Name = "button_Latvanyossag_Delete";
-            this.button_Latvanyossag_Delete.Size = new System.Drawing.Size(171, 23);
-            this.button_Latvanyossag_Delete.TabIndex = 12;
-            this.button_Latvanyossag_Delete.Text = "Törlés";
-            this.button_Latvanyossag_Delete.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(33, 59);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(110, 13);
-            this.label3.TabIndex = 10;
-            this.label3.Text = "Nevezetesség leírása";
-            // 
-            // pictureBox_Cimer
-            // 
-            this.pictureBox_Cimer.Location = new System.Drawing.Point(30, 265);
-            this.pictureBox_Cimer.Name = "pictureBox_Cimer";
-            this.pictureBox_Cimer.Size = new System.Drawing.Size(138, 122);
-            this.pictureBox_Cimer.TabIndex = 11;
-            this.pictureBox_Cimer.TabStop = false;
-            // 
-            // panel_Varosadatok
-            // 
-            this.panel_Varosadatok.Controls.Add(this.button_Varos_Delete);
-            this.panel_Varosadatok.Controls.Add(this.pictureBox_Cimer);
-            this.panel_Varosadatok.Controls.Add(this.label_Varosnev);
-            this.panel_Varosadatok.Controls.Add(this.textBox_Varosnev);
-            this.panel_Varosadatok.Controls.Add(this.numeric_Lakossag);
-            this.panel_Varosadatok.Controls.Add(this.label1);
-            this.panel_Varosadatok.Controls.Add(this.button_Varos_Insert);
-            this.panel_Varosadatok.Controls.Add(this.button_Varos_Update);
-            this.panel_Varosadatok.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel_Varosadatok.Location = new System.Drawing.Point(276, 16);
-            this.panel_Varosadatok.Name = "panel_Varosadatok";
-            this.panel_Varosadatok.Size = new System.Drawing.Size(200, 406);
-            this.panel_Varosadatok.TabIndex = 13;
             // 
             // panel_Latvanyossagadatok
             // 
@@ -286,14 +241,14 @@
             this.panel_Latvanyossagadatok.Size = new System.Drawing.Size(239, 406);
             this.panel_Latvanyossagadatok.TabIndex = 13;
             // 
-            // numeric_Latvanyossag_ar
+            // label4
             // 
-            this.numeric_Latvanyossag_ar.Location = new System.Drawing.Point(66, 229);
-            this.numeric_Latvanyossag_ar.Name = "numeric_Latvanyossag_ar";
-            this.numeric_Latvanyossag_ar.Size = new System.Drawing.Size(118, 20);
-            this.numeric_Latvanyossag_ar.TabIndex = 13;
-            this.numeric_Latvanyossag_ar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.numeric_Latvanyossag_ar.ThousandsSeparator = true;
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(33, 231);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(17, 13);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "Ár";
             // 
             // label2
             // 
@@ -304,14 +259,100 @@
             this.label2.TabIndex = 14;
             this.label2.Text = "Ft";
             // 
-            // label4
+            // numeric_Latvanyossag_ar
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(33, 231);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(17, 13);
-            this.label4.TabIndex = 15;
-            this.label4.Text = "Ár";
+            this.numeric_Latvanyossag_ar.Increment = new decimal(new int[] {
+            100,
+            0,
+            0,
+            0});
+            this.numeric_Latvanyossag_ar.Location = new System.Drawing.Point(66, 229);
+            this.numeric_Latvanyossag_ar.Maximum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.numeric_Latvanyossag_ar.Name = "numeric_Latvanyossag_ar";
+            this.numeric_Latvanyossag_ar.Size = new System.Drawing.Size(118, 20);
+            this.numeric_Latvanyossag_ar.TabIndex = 13;
+            this.numeric_Latvanyossag_ar.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.numeric_Latvanyossag_ar.ThousandsSeparator = true;
+            // 
+            // button_Latvanyossag_Insert
+            // 
+            this.button_Latvanyossag_Insert.Location = new System.Drawing.Point(36, 264);
+            this.button_Latvanyossag_Insert.Name = "button_Latvanyossag_Insert";
+            this.button_Latvanyossag_Insert.Size = new System.Drawing.Size(171, 23);
+            this.button_Latvanyossag_Insert.TabIndex = 10;
+            this.button_Latvanyossag_Insert.Text = "Látványosság rögzítése";
+            this.button_Latvanyossag_Insert.UseVisualStyleBackColor = true;
+            this.button_Latvanyossag_Insert.Click += new System.EventHandler(this.button_Latvanyossag_Insert_Click);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(33, 59);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(110, 13);
+            this.label3.TabIndex = 10;
+            this.label3.Text = "Nevezetesség leírása";
+            // 
+            // button_Latvanyossag_Update
+            // 
+            this.button_Latvanyossag_Update.Location = new System.Drawing.Point(36, 304);
+            this.button_Latvanyossag_Update.Name = "button_Latvanyossag_Update";
+            this.button_Latvanyossag_Update.Size = new System.Drawing.Size(171, 23);
+            this.button_Latvanyossag_Update.TabIndex = 11;
+            this.button_Latvanyossag_Update.Text = "Kiválasztott módosítása";
+            this.button_Latvanyossag_Update.UseVisualStyleBackColor = true;
+            // 
+            // textBox_Nevezetesseg_leiras
+            // 
+            this.textBox_Nevezetesseg_leiras.Location = new System.Drawing.Point(33, 82);
+            this.textBox_Nevezetesseg_leiras.Multiline = true;
+            this.textBox_Nevezetesseg_leiras.Name = "textBox_Nevezetesseg_leiras";
+            this.textBox_Nevezetesseg_leiras.Size = new System.Drawing.Size(174, 126);
+            this.textBox_Nevezetesseg_leiras.TabIndex = 9;
+            // 
+            // button_Latvanyossag_Delete
+            // 
+            this.button_Latvanyossag_Delete.Location = new System.Drawing.Point(36, 343);
+            this.button_Latvanyossag_Delete.Name = "button_Latvanyossag_Delete";
+            this.button_Latvanyossag_Delete.Size = new System.Drawing.Size(171, 23);
+            this.button_Latvanyossag_Delete.TabIndex = 12;
+            this.button_Latvanyossag_Delete.Text = "Törlés";
+            this.button_Latvanyossag_Delete.UseVisualStyleBackColor = true;
+            // 
+            // textBox_nevezetesseg
+            // 
+            this.textBox_nevezetesseg.Location = new System.Drawing.Point(33, 26);
+            this.textBox_nevezetesseg.Name = "textBox_nevezetesseg";
+            this.textBox_nevezetesseg.Size = new System.Drawing.Size(174, 20);
+            this.textBox_nevezetesseg.TabIndex = 6;
+            // 
+            // label_Varos_nevezetesseg
+            // 
+            this.label_Varos_nevezetesseg.AutoSize = true;
+            this.label_Varos_nevezetesseg.Location = new System.Drawing.Point(33, 8);
+            this.label_Varos_nevezetesseg.Name = "label_Varos_nevezetesseg";
+            this.label_Varos_nevezetesseg.Size = new System.Drawing.Size(118, 13);
+            this.label_Varos_nevezetesseg.TabIndex = 7;
+            this.label_Varos_nevezetesseg.Text = "A város nevezetessége";
+            // 
+            // listBox_Latvanyossagok
+            // 
+            this.listBox_Latvanyossagok.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.listBox_Latvanyossagok.Dock = System.Windows.Forms.DockStyle.Left;
+            this.listBox_Latvanyossagok.FormattingEnabled = true;
+            this.listBox_Latvanyossagok.Location = new System.Drawing.Point(3, 16);
+            this.listBox_Latvanyossagok.Name = "listBox_Latvanyossagok";
+            this.listBox_Latvanyossagok.Size = new System.Drawing.Size(325, 406);
+            this.listBox_Latvanyossagok.TabIndex = 0;
+            this.listBox_Latvanyossagok.SelectedIndexChanged += new System.EventHandler(this.listBox_Latvanyossagok_SelectedIndexChanged);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // Form_Latvanyossagok
             // 
@@ -325,11 +366,11 @@
             this.Text = "LatvanyossagokApplication";
             this.Load += new System.EventHandler(this.Form_Latvanyossagok_Load);
             this.groupBox_Varosok.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numeric_Lakossag)).EndInit();
-            this.groupBox_Latnivalok.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Cimer)).EndInit();
             this.panel_Varosadatok.ResumeLayout(false);
             this.panel_Varosadatok.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Cimer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numeric_Lakossag)).EndInit();
+            this.groupBox_Latnivalok.ResumeLayout(false);
             this.panel_Latvanyossagadatok.ResumeLayout(false);
             this.panel_Latvanyossagadatok.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numeric_Latvanyossag_ar)).EndInit();
@@ -363,6 +404,9 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.NumericUpDown numeric_Latvanyossag_ar;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Button button_Cimer_feltoltese;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }
 

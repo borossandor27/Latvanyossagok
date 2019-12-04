@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.2
+-- version 4.8.3
 -- https://www.phpmyadmin.net/
 --
--- Gép: 127.0.0.1:3307
--- Létrehozás ideje: 2019. Nov 29. 15:08
--- Kiszolgáló verziója: 10.1.34-MariaDB
--- PHP verzió: 7.2.8
+-- Gép: 127.0.0.1
+-- Létrehozás ideje: 2019. Dec 04. 12:23
+-- Kiszolgáló verziója: 10.1.36-MariaDB
+-- PHP verzió: 7.2.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -52,6 +52,7 @@ CREATE TABLE IF NOT EXISTS `varosok` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nev` varchar(100) NOT NULL,
   `lakossag` int(11) NOT NULL,
+  `cimer` mediumblob,
   PRIMARY KEY (`id`),
   UNIQUE KEY `nev` (`nev`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -64,7 +65,7 @@ CREATE TABLE IF NOT EXISTS `varosok` (
 -- Megkötések a táblához `latvanyossagok`
 --
 ALTER TABLE `latvanyossagok`
-  ADD CONSTRAINT `fk_varos_latvanyossag` FOREIGN KEY (`varos_id`) REFERENCES `varosok` (`id`);
+  ADD CONSTRAINT `fk_varos_latvanyossag` FOREIGN KEY (`varos_id`) REFERENCES `varosok` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

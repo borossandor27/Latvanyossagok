@@ -30,7 +30,14 @@ namespace LatvanyossagokApplication
 
         public override string ToString()
         {
-            return $"{Nev} - {Ar} Ft";
+            if (ar != 0)
+            {
+                return $"{Nev} - {Ar} Ft";
+            }
+            else
+            {
+                return $"{Nev} - Ingyenes";
+            }
         }
     }
 }
