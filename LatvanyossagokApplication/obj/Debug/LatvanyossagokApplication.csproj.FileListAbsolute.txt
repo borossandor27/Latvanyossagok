@@ -1,52 +1,36 @@
-C:\Users\Sanyi\source\repos\LatvanyossagokApplication\LatvanyossagokApplication\bin\Debug\LatvanyossagokApplication.exe.config
-C:\Users\Sanyi\source\repos\LatvanyossagokApplication\LatvanyossagokApplication\bin\Debug\LatvanyossagokApplication.exe
-C:\Users\Sanyi\source\repos\LatvanyossagokApplication\LatvanyossagokApplication\bin\Debug\LatvanyossagokApplication.pdb
-C:\Users\Sanyi\source\repos\LatvanyossagokApplication\LatvanyossagokApplication\obj\Debug\LatvanyossagokApplication.csprojAssemblyReference.cache
-C:\Users\Sanyi\source\repos\LatvanyossagokApplication\LatvanyossagokApplication\obj\Debug\LatvanyossagokApplication.Form_Latvanyossagok.resources
-C:\Users\Sanyi\source\repos\LatvanyossagokApplication\LatvanyossagokApplication\obj\Debug\LatvanyossagokApplication.Properties.Resources.resources
-C:\Users\Sanyi\source\repos\LatvanyossagokApplication\LatvanyossagokApplication\obj\Debug\LatvanyossagokApplication.csproj.GenerateResource.cache
-C:\Users\Sanyi\source\repos\LatvanyossagokApplication\LatvanyossagokApplication\obj\Debug\LatvanyossagokApplication.exe
-C:\Users\Sanyi\source\repos\LatvanyossagokApplication\LatvanyossagokApplication\obj\Debug\LatvanyossagokApplication.pdb
-C:\Users\Sanyi\source\repos\LatvanyossagokApplication\LatvanyossagokApplication\bin\Debug\BouncyCastle.Crypto.dll
-C:\Users\Sanyi\source\repos\LatvanyossagokApplication\LatvanyossagokApplication\bin\Debug\Google.Protobuf.dll
-C:\Users\Sanyi\source\repos\LatvanyossagokApplication\LatvanyossagokApplication\bin\Debug\MySql.Data.dll
-C:\Users\Sanyi\source\repos\LatvanyossagokApplication\LatvanyossagokApplication\bin\Debug\Renci.SshNet.dll
-C:\Users\Sanyi\source\repos\LatvanyossagokApplication\LatvanyossagokApplication\bin\Debug\Google.Protobuf.xml
-C:\Users\Sanyi\source\repos\LatvanyossagokApplication\LatvanyossagokApplication\bin\Debug\MySql.Data.xml
-C:\Users\Sanyi\source\repos\LatvanyossagokApplication\LatvanyossagokApplication\bin\Debug\Renci.SshNet.xml
-C:\Users\Sanyi\source\repos\LatvanyossagokApplication\LatvanyossagokApplication\obj\Debug\LatvanyossagokApplication.csproj.CopyComplete
-C:\Users\Diak\Source\Repos\Latvanyossagok\LatvanyossagokApplication\bin\Debug\LatvanyossagokApplication.exe.config
-C:\Users\Diak\Source\Repos\Latvanyossagok\LatvanyossagokApplication\bin\Debug\LatvanyossagokApplication.exe
-C:\Users\Diak\Source\Repos\Latvanyossagok\LatvanyossagokApplication\bin\Debug\LatvanyossagokApplication.pdb
-C:\Users\Diak\Source\Repos\Latvanyossagok\LatvanyossagokApplication\bin\Debug\BouncyCastle.Crypto.dll
-C:\Users\Diak\Source\Repos\Latvanyossagok\LatvanyossagokApplication\bin\Debug\Google.Protobuf.dll
-C:\Users\Diak\Source\Repos\Latvanyossagok\LatvanyossagokApplication\bin\Debug\MySql.Data.dll
-C:\Users\Diak\Source\Repos\Latvanyossagok\LatvanyossagokApplication\bin\Debug\Renci.SshNet.dll
-C:\Users\Diak\Source\Repos\Latvanyossagok\LatvanyossagokApplication\bin\Debug\Google.Protobuf.xml
-C:\Users\Diak\Source\Repos\Latvanyossagok\LatvanyossagokApplication\bin\Debug\MySql.Data.xml
-C:\Users\Diak\Source\Repos\Latvanyossagok\LatvanyossagokApplication\bin\Debug\Renci.SshNet.xml
-C:\Users\Diak\Source\Repos\Latvanyossagok\LatvanyossagokApplication\obj\Debug\LatvanyossagokApplication.csprojAssemblyReference.cache
-C:\Users\Diak\Source\Repos\Latvanyossagok\LatvanyossagokApplication\obj\Debug\LatvanyossagokApplication.Form_Latvanyossagok.resources
-C:\Users\Diak\Source\Repos\Latvanyossagok\LatvanyossagokApplication\obj\Debug\LatvanyossagokApplication.Properties.Resources.resources
-C:\Users\Diak\Source\Repos\Latvanyossagok\LatvanyossagokApplication\obj\Debug\LatvanyossagokApplication.csproj.GenerateResource.cache
-C:\Users\Diak\Source\Repos\Latvanyossagok\LatvanyossagokApplication\obj\Debug\LatvanyossagokApplication.csproj.CoreCompileInputs.cache
-C:\Users\Diak\Source\Repos\Latvanyossagok\LatvanyossagokApplication\obj\Debug\LatvanyossagokApplication.csproj.CopyComplete
-C:\Users\Diak\Source\Repos\Latvanyossagok\LatvanyossagokApplication\obj\Debug\LatvanyossagokApplication.exe
-C:\Users\Diak\Source\Repos\Latvanyossagok\LatvanyossagokApplication\obj\Debug\LatvanyossagokApplication.pdb
-C:\Users\Sanyi\Source\Repos\Latvanyossagok\LatvanyossagokApplication\bin\Debug\LatvanyossagokApplication.exe.config
-C:\Users\Sanyi\Source\Repos\Latvanyossagok\LatvanyossagokApplication\bin\Debug\LatvanyossagokApplication.exe
-C:\Users\Sanyi\Source\Repos\Latvanyossagok\LatvanyossagokApplication\bin\Debug\LatvanyossagokApplication.pdb
-C:\Users\Sanyi\Source\Repos\Latvanyossagok\LatvanyossagokApplication\bin\Debug\BouncyCastle.Crypto.dll
-C:\Users\Sanyi\Source\Repos\Latvanyossagok\LatvanyossagokApplication\bin\Debug\Google.Protobuf.dll
-C:\Users\Sanyi\Source\Repos\Latvanyossagok\LatvanyossagokApplication\bin\Debug\MySql.Data.dll
-C:\Users\Sanyi\Source\Repos\Latvanyossagok\LatvanyossagokApplication\bin\Debug\Renci.SshNet.dll
-C:\Users\Sanyi\Source\Repos\Latvanyossagok\LatvanyossagokApplication\bin\Debug\Google.Protobuf.xml
-C:\Users\Sanyi\Source\Repos\Latvanyossagok\LatvanyossagokApplication\bin\Debug\MySql.Data.xml
-C:\Users\Sanyi\Source\Repos\Latvanyossagok\LatvanyossagokApplication\bin\Debug\Renci.SshNet.xml
-C:\Users\Sanyi\Source\Repos\Latvanyossagok\LatvanyossagokApplication\obj\Debug\LatvanyossagokApplication.csprojAssemblyReference.cache
-C:\Users\Sanyi\Source\Repos\Latvanyossagok\LatvanyossagokApplication\obj\Debug\LatvanyossagokApplication.Form_Latvanyossagok.resources
-C:\Users\Sanyi\Source\Repos\Latvanyossagok\LatvanyossagokApplication\obj\Debug\LatvanyossagokApplication.Properties.Resources.resources
-C:\Users\Sanyi\Source\Repos\Latvanyossagok\LatvanyossagokApplication\obj\Debug\LatvanyossagokApplication.csproj.GenerateResource.cache
-C:\Users\Sanyi\Source\Repos\Latvanyossagok\LatvanyossagokApplication\obj\Debug\LatvanyossagokApplication.csproj.CopyComplete
-C:\Users\Sanyi\Source\Repos\Latvanyossagok\LatvanyossagokApplication\obj\Debug\LatvanyossagokApplication.exe
-C:\Users\Sanyi\Source\Repos\Latvanyossagok\LatvanyossagokApplication\obj\Debug\LatvanyossagokApplication.pdb
+C:\Users\Sanyi\source\repos\Latvanyossagok\LatvanyossagokApplication\bin\Debug\LatvanyossagokApplication.exe.config
+C:\Users\Sanyi\source\repos\Latvanyossagok\LatvanyossagokApplication\bin\Debug\LatvanyossagokApplication.exe
+C:\Users\Sanyi\source\repos\Latvanyossagok\LatvanyossagokApplication\bin\Debug\LatvanyossagokApplication.pdb
+C:\Users\Sanyi\source\repos\Latvanyossagok\LatvanyossagokApplication\bin\Debug\BouncyCastle.Crypto.dll
+C:\Users\Sanyi\source\repos\Latvanyossagok\LatvanyossagokApplication\bin\Debug\Google.Protobuf.dll
+C:\Users\Sanyi\source\repos\Latvanyossagok\LatvanyossagokApplication\bin\Debug\MySql.Data.dll
+C:\Users\Sanyi\source\repos\Latvanyossagok\LatvanyossagokApplication\bin\Debug\Renci.SshNet.dll
+C:\Users\Sanyi\source\repos\Latvanyossagok\LatvanyossagokApplication\bin\Debug\Google.Protobuf.xml
+C:\Users\Sanyi\source\repos\Latvanyossagok\LatvanyossagokApplication\bin\Debug\MySql.Data.xml
+C:\Users\Sanyi\source\repos\Latvanyossagok\LatvanyossagokApplication\bin\Debug\Renci.SshNet.xml
+C:\Users\Sanyi\source\repos\Latvanyossagok\LatvanyossagokApplication\obj\Debug\LatvanyossagokApplication.csprojAssemblyReference.cache
+C:\Users\Sanyi\source\repos\Latvanyossagok\LatvanyossagokApplication\obj\Debug\LatvanyossagokApplication.Form_Latvanyossagok.resources
+C:\Users\Sanyi\source\repos\Latvanyossagok\LatvanyossagokApplication\obj\Debug\LatvanyossagokApplication.Properties.Resources.resources
+C:\Users\Sanyi\source\repos\Latvanyossagok\LatvanyossagokApplication\obj\Debug\LatvanyossagokApplication.csproj.GenerateResource.cache
+C:\Users\Sanyi\source\repos\Latvanyossagok\LatvanyossagokApplication\obj\Debug\LatvanyossagokApplication.csproj.CopyComplete
+C:\Users\Sanyi\source\repos\Latvanyossagok\LatvanyossagokApplication\obj\Debug\LatvanyossagokApplication.exe
+C:\Users\Sanyi\source\repos\Latvanyossagok\LatvanyossagokApplication\obj\Debug\LatvanyossagokApplication.pdb
+D:\Boros\OneDrive - Debreceni SZC Beregszászi Pál Szakgimnáziuma és Szakközépiskolája\Latvanyossagok\LatvanyossagokApplication\bin\Debug\LatvanyossagokApplication.exe.config
+D:\Boros\OneDrive - Debreceni SZC Beregszászi Pál Szakgimnáziuma és Szakközépiskolája\Latvanyossagok\LatvanyossagokApplication\bin\Debug\LatvanyossagokApplication.exe
+D:\Boros\OneDrive - Debreceni SZC Beregszászi Pál Szakgimnáziuma és Szakközépiskolája\Latvanyossagok\LatvanyossagokApplication\bin\Debug\LatvanyossagokApplication.pdb
+D:\Boros\OneDrive - Debreceni SZC Beregszászi Pál Szakgimnáziuma és Szakközépiskolája\Latvanyossagok\LatvanyossagokApplication\bin\Debug\BouncyCastle.Crypto.dll
+D:\Boros\OneDrive - Debreceni SZC Beregszászi Pál Szakgimnáziuma és Szakközépiskolája\Latvanyossagok\LatvanyossagokApplication\bin\Debug\Google.Protobuf.dll
+D:\Boros\OneDrive - Debreceni SZC Beregszászi Pál Szakgimnáziuma és Szakközépiskolája\Latvanyossagok\LatvanyossagokApplication\bin\Debug\MySql.Data.dll
+D:\Boros\OneDrive - Debreceni SZC Beregszászi Pál Szakgimnáziuma és Szakközépiskolája\Latvanyossagok\LatvanyossagokApplication\bin\Debug\Renci.SshNet.dll
+D:\Boros\OneDrive - Debreceni SZC Beregszászi Pál Szakgimnáziuma és Szakközépiskolája\Latvanyossagok\LatvanyossagokApplication\bin\Debug\Google.Protobuf.xml
+D:\Boros\OneDrive - Debreceni SZC Beregszászi Pál Szakgimnáziuma és Szakközépiskolája\Latvanyossagok\LatvanyossagokApplication\bin\Debug\MySql.Data.xml
+D:\Boros\OneDrive - Debreceni SZC Beregszászi Pál Szakgimnáziuma és Szakközépiskolája\Latvanyossagok\LatvanyossagokApplication\bin\Debug\Renci.SshNet.xml
+D:\Boros\OneDrive - Debreceni SZC Beregszászi Pál Szakgimnáziuma és Szakközépiskolája\Latvanyossagok\LatvanyossagokApplication\obj\Debug\LatvanyossagokApplication.csprojAssemblyReference.cache
+D:\Boros\OneDrive - Debreceni SZC Beregszászi Pál Szakgimnáziuma és Szakközépiskolája\Latvanyossagok\LatvanyossagokApplication\obj\Debug\LatvanyossagokApplication.Form_Latvanyossagok.resources
+D:\Boros\OneDrive - Debreceni SZC Beregszászi Pál Szakgimnáziuma és Szakközépiskolája\Latvanyossagok\LatvanyossagokApplication\obj\Debug\LatvanyossagokApplication.Properties.Resources.resources
+D:\Boros\OneDrive - Debreceni SZC Beregszászi Pál Szakgimnáziuma és Szakközépiskolája\Latvanyossagok\LatvanyossagokApplication\obj\Debug\LatvanyossagokApplication.csproj.GenerateResource.cache
+D:\Boros\OneDrive - Debreceni SZC Beregszászi Pál Szakgimnáziuma és Szakközépiskolája\Latvanyossagok\LatvanyossagokApplication\obj\Debug\LatvanyossagokApplication.csproj.CoreCompileInputs.cache
+D:\Boros\OneDrive - Debreceni SZC Beregszászi Pál Szakgimnáziuma és Szakközépiskolája\Latvanyossagok\LatvanyossagokApplication\obj\Debug\LatvanyossagokApplication.csproj.CopyComplete
+D:\Boros\OneDrive - Debreceni SZC Beregszászi Pál Szakgimnáziuma és Szakközépiskolája\Latvanyossagok\LatvanyossagokApplication\obj\Debug\LatvanyossagokApplication.exe
+D:\Boros\OneDrive - Debreceni SZC Beregszászi Pál Szakgimnáziuma és Szakközépiskolája\Latvanyossagok\LatvanyossagokApplication\obj\Debug\LatvanyossagokApplication.pdb
+C:\Users\Sanyi\source\repos\Latvanyossagok\LatvanyossagokApplication\obj\Debug\LatvanyossagokApplication.Form_varosok.resources

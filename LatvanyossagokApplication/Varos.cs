@@ -32,7 +32,7 @@ namespace LatvanyossagokApplication
             this.Cimer = cimer;
         }
 
-        public Bitmap ByteToImage()
+        public Bitmap ByteArrayToImage()
         {
             if (cimer == null) return null;
             MemoryStream mStream = new MemoryStream();

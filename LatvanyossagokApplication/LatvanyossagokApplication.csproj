@@ -66,11 +66,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DatabaseTool.cs" />
     <Compile Include="Form_Latvanyossagok.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form_Latvanyossagok.Designer.cs">
       <DependentUpon>Form_Latvanyossagok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form_varosok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form_varosok.Designer.cs">
+      <DependentUpon>Form_varosok.cs</DependentUpon>
     </Compile>
     <Compile Include="Latvanyossag.cs" />
     <Compile Include="Program.cs" />
@@ -78,6 +85,9 @@
     <Compile Include="Varos.cs" />
     <EmbeddedResource Include="Form_Latvanyossagok.resx">
       <DependentUpon>Form_Latvanyossagok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form_varosok.resx">
+      <DependentUpon>Form_varosok.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -102,6 +112,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back-icon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
