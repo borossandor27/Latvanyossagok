@@ -116,5 +116,11 @@
   <ItemGroup>
     <None Include="Resources\back-icon.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next-icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\next-icon1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

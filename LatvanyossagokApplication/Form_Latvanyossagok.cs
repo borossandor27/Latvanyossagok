@@ -26,7 +26,7 @@ namespace LatvanyossagokApplication
 
         private void Form_Latvanyossagok_Load(object sender, EventArgs e)
         {
-    
+            LatnivaloUpdate();
         }
 
         private void LatnivaloUpdate()
@@ -36,6 +36,8 @@ namespace LatvanyossagokApplication
             label_Varosnev.Top = (panel_Varosnev.Height - label_Varosnev.Height) / 2;
             label_Varosnev.Left = (panel_Varosnev.Width - label_Varosnev.Width) / 2;
             listBox_Latvanyossagok.Items.Clear();
+            textBox_nevezetesseg.Text = "";
+            textBox_Nevezetesseg_leiras.Text = "";
             sql.CommandText = "SELECT `id`,`nev`,`leiras`,`ar`,`varos_id` FROM `latvanyossagok` WHERE `varos_id` = @id ;";
             sql.Parameters.Clear();
             sql.Parameters.AddWithValue("@id", Program.KivalasztottVaros.Id);
@@ -48,13 +50,39 @@ namespace LatvanyossagokApplication
                 }
             }
             Program.conn.Close();
+            Gombok();
         }
 
+        private void Gombok()
+        {
+            if (listBox_Latvanyossagok.SelectedIndex >= 0)
+            {
+                button_Latvanyossag_Delete.Enabled = true;
+                button_Latvanyossag_Update.Enabled = true;
+                button_Latvanyossag_Insert.Enabled = true;
+            }
+            else
+            {
+                button_Latvanyossag_Delete.Enabled = false;
+                button_Latvanyossag_Update.Enabled = false;
+                button_Latvanyossag_Insert.Enabled = false;
+            }
+        }
         private void listBox_Latvanyossagok_SelectedIndexChanged(object sender, EventArgs e)
         {
-            KivalasztottLatvanyossag = (Latvanyossag)listBox_Latvanyossagok.SelectedItem;
-            textBox_nevezetesseg.Text = KivalasztottLatvanyossag.Nev;
-            textBox_Nevezetesseg_leiras.Text = KivalasztottLatvanyossag.Leiras;
+            if (listBox_Latvanyossagok.SelectedIndex >= 0)
+            {
+                KivalasztottLatvanyossag = (Latvanyossag)listBox_Latvanyossagok.SelectedItem;
+                textBox_nevezetesseg.Text = KivalasztottLatvanyossag.Nev;
+                textBox_Nevezetesseg_leiras.Text = KivalasztottLatvanyossag.Leiras;
+            }
+            else
+            {
+                KivalasztottLatvanyossag = null;
+                textBox_nevezetesseg.Text = "";
+                textBox_Nevezetesseg_leiras.Text = "";
+            }
+            Gombok();
         }
 
         private void button_Latvanyossag_Insert_Click(object sender, EventArgs e)
@@ -64,6 +92,7 @@ namespace LatvanyossagokApplication
                 MessageBox.Show("Kérem töltse ki a nevezetesség mezőt!");
                 textBox_nevezetesseg.Focus();
                 textBox_nevezetesseg.Select(textBox_nevezetesseg.Text.Length, 0);
+                return;
             }
             if (textBox_Nevezetesseg_leiras.Text.Trim().Length<3)
             {
@@ -72,7 +101,7 @@ namespace LatvanyossagokApplication
                 textBox_Nevezetesseg_leiras.Select(textBox_Nevezetesseg_leiras.Text.Length, 0);
                 return;
             }
-            sql.CommandText = "INSERT INTO `latvanyossagok` (`id`, `nev`, `leiras`, `ar`, `varos_id`) VALUES (NULL, '@nev', '@leiras', '@ar', '@varosid');";
+            sql.CommandText = "INSERT INTO `latvanyossagok` (`id`, `nev`, `leiras`, `ar`, `varos_id`) VALUES (NULL, @nev, @leiras, @ar, @varosid);";
             sql.Parameters.Clear();
             sql.Parameters.AddWithValue("@nev", textBox_nevezetesseg.Text.Trim());
             sql.Parameters.AddWithValue("@leiras", textBox_Nevezetesseg_leiras.Text.Trim());
@@ -88,7 +117,7 @@ namespace LatvanyossagokApplication
             {
                 MessageBox.Show(myex.Message);
             }
-
+            LatnivaloUpdate();
         }
 
         private void button_tesztadatok_Click(object sender, EventArgs e)
@@ -146,10 +175,20 @@ namespace LatvanyossagokApplication
         {
             //button_Varosok_form_view.BackColor = default(Color);
             button_Varosok_form_view.BackColor = Color.LightGreen;
-            button_Varosok_form_view.FlatStyle = FlatStyle.System;
+            button_Varosok_form_view.FlatStyle = FlatStyle.Flat;
+            button_Varosok_form_view.FlatAppearance.BorderColor = Color.Green;
+            button_Varosok_form_view.FlatAppearance.BorderSize = 1;
             button_Varosok_form_view.Image = LatvanyossagokApplication.Properties.Resources.back_icon;
             button_Varosok_form_view.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
 
+        }
+
+        private void button_Latvanyossag_Delete_Click(object sender, EventArgs e)
+        {
+            if (listBox_Latvanyossagok.SelectedIndex == -1)
+            {
+                return;
+            }
         }
     }
 }

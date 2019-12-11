@@ -33,9 +33,7 @@
             this.panel_Varosadatok = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
             this.button_Cimer_feltoltese = new System.Windows.Forms.Button();
-            this.button_Latvanyossagok_form_view = new System.Windows.Forms.Button();
             this.button_Varos_Delete = new System.Windows.Forms.Button();
-            this.pictureBox_Cimer = new System.Windows.Forms.PictureBox();
             this.label_Varosnev = new System.Windows.Forms.Label();
             this.textBox_Varosnev = new System.Windows.Forms.TextBox();
             this.numeric_Lakossag = new System.Windows.Forms.NumericUpDown();
@@ -43,10 +41,12 @@
             this.button_Varos_Insert = new System.Windows.Forms.Button();
             this.button_Varos_Update = new System.Windows.Forms.Button();
             this.listBox_Varosok = new System.Windows.Forms.ListBox();
+            this.button_Latvanyossagok_form_view = new System.Windows.Forms.Button();
+            this.pictureBox_Cimer = new System.Windows.Forms.PictureBox();
             this.groupBox_Varosok.SuspendLayout();
             this.panel_Varosadatok.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Cimer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numeric_Lakossag)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Cimer)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox_Varosok
@@ -93,21 +93,10 @@
             this.button_Cimer_feltoltese.Location = new System.Drawing.Point(12, 231);
             this.button_Cimer_feltoltese.Name = "button_Cimer_feltoltese";
             this.button_Cimer_feltoltese.Size = new System.Drawing.Size(199, 23);
-            this.button_Cimer_feltoltese.TabIndex = 5;
+            this.button_Cimer_feltoltese.TabIndex = 6;
             this.button_Cimer_feltoltese.Text = "Cimer feltöltése";
             this.button_Cimer_feltoltese.UseVisualStyleBackColor = true;
             this.button_Cimer_feltoltese.Click += new System.EventHandler(this.button_Cimer_feltoltese_Click);
-            // 
-            // button_Latvanyossagok_form_view
-            // 
-            this.button_Latvanyossagok_form_view.BackColor = System.Drawing.Color.LightGreen;
-            this.button_Latvanyossagok_form_view.Location = new System.Drawing.Point(12, 439);
-            this.button_Latvanyossagok_form_view.Name = "button_Latvanyossagok_form_view";
-            this.button_Latvanyossagok_form_view.Size = new System.Drawing.Size(199, 23);
-            this.button_Latvanyossagok_form_view.TabIndex = 5;
-            this.button_Latvanyossagok_form_view.Text = "Kiválasztott város látványosságai";
-            this.button_Latvanyossagok_form_view.UseVisualStyleBackColor = false;
-            this.button_Latvanyossagok_form_view.Click += new System.EventHandler(this.button_Latvanyossagok_form_view_Click);
             // 
             // button_Varos_Delete
             // 
@@ -118,15 +107,6 @@
             this.button_Varos_Delete.Text = "Kiválasztott város törlése";
             this.button_Varos_Delete.UseVisualStyleBackColor = true;
             this.button_Varos_Delete.Click += new System.EventHandler(this.button_Varos_Delete_Click);
-            // 
-            // pictureBox_Cimer
-            // 
-            this.pictureBox_Cimer.Location = new System.Drawing.Point(33, 274);
-            this.pictureBox_Cimer.Name = "pictureBox_Cimer";
-            this.pictureBox_Cimer.Size = new System.Drawing.Size(154, 139);
-            this.pictureBox_Cimer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox_Cimer.TabIndex = 11;
-            this.pictureBox_Cimer.TabStop = false;
             // 
             // label_Varosnev
             // 
@@ -206,8 +186,32 @@
             this.listBox_Varosok.Location = new System.Drawing.Point(3, 16);
             this.listBox_Varosok.Name = "listBox_Varosok";
             this.listBox_Varosok.Size = new System.Drawing.Size(267, 477);
-            this.listBox_Varosok.TabIndex = 0;
+            this.listBox_Varosok.TabIndex = 8;
             this.listBox_Varosok.SelectedIndexChanged += new System.EventHandler(this.listBox_Varosok_SelectedIndexChanged);
+            // 
+            // button_Latvanyossagok_form_view
+            // 
+            this.button_Latvanyossagok_form_view.BackColor = System.Drawing.Color.LightGreen;
+            this.button_Latvanyossagok_form_view.Image = global::LatvanyossagokApplication.Properties.Resources.next_icon1;
+            this.button_Latvanyossagok_form_view.Location = new System.Drawing.Point(12, 432);
+            this.button_Latvanyossagok_form_view.Name = "button_Latvanyossagok_form_view";
+            this.button_Latvanyossagok_form_view.Size = new System.Drawing.Size(199, 40);
+            this.button_Latvanyossagok_form_view.TabIndex = 7;
+            this.button_Latvanyossagok_form_view.Text = "Kiválasztott város látványosságai";
+            this.button_Latvanyossagok_form_view.TextImageRelation = System.Windows.Forms.TextImageRelation.TextBeforeImage;
+            this.button_Latvanyossagok_form_view.UseVisualStyleBackColor = false;
+            this.button_Latvanyossagok_form_view.Click += new System.EventHandler(this.button_Latvanyossagok_form_view_Click);
+            this.button_Latvanyossagok_form_view.MouseEnter += new System.EventHandler(this.button_Latvanyossagok_form_view_MouseEnter);
+            this.button_Latvanyossagok_form_view.MouseLeave += new System.EventHandler(this.button_Latvanyossagok_form_view_MouseLeave);
+            // 
+            // pictureBox_Cimer
+            // 
+            this.pictureBox_Cimer.Location = new System.Drawing.Point(33, 274);
+            this.pictureBox_Cimer.Name = "pictureBox_Cimer";
+            this.pictureBox_Cimer.Size = new System.Drawing.Size(154, 139);
+            this.pictureBox_Cimer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox_Cimer.TabIndex = 11;
+            this.pictureBox_Cimer.TabStop = false;
             // 
             // Form_varosok
             // 
@@ -224,8 +228,8 @@
             this.groupBox_Varosok.ResumeLayout(false);
             this.panel_Varosadatok.ResumeLayout(false);
             this.panel_Varosadatok.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Cimer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numeric_Lakossag)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox_Cimer)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -81,6 +81,8 @@ namespace LatvanyossagokApplication
                 button_Varos_Delete.Enabled = true;
                 button_Varos_Update.Enabled = true;
                 button_Latvanyossagok_form_view.Enabled = true;
+                button_Cimer_feltoltese.Enabled = true;
+                button_Latvanyossagok_form_view.Enabled = true;
                 pictureBox_Cimer.Image = Program.KivalasztottVaros.ByteArrayToImage();
 
             }
@@ -93,6 +95,8 @@ namespace LatvanyossagokApplication
                 button_Varos_Update.Enabled = false;
                 button_Latvanyossagok_form_view.Enabled = false;
                 pictureBox_Cimer.Image = Program.KivalasztottVaros.ByteArrayToImage();
+                button_Cimer_feltoltese.Enabled = false;
+                button_Latvanyossagok_form_view.Enabled = false;
 
             }
         }
@@ -270,8 +274,11 @@ namespace LatvanyossagokApplication
         }
         private void button_Latvanyossagok_form_view_Click(object sender, EventArgs e)
         {
-            this.Hide();
-            Program.form_latvanyossag.Show();
+            if (listBox_Varosok.SelectedIndex >= 0 && Program.KivalasztottVaros != null)
+            {
+                this.Hide();
+                Program.form_latvanyossag.Show();
+            }
         }
         private void textBox_Varosnev_TextChanged(object sender, EventArgs e)
         {
@@ -281,6 +288,23 @@ namespace LatvanyossagokApplication
                 textBox_Varosnev.Select(textBox_Varosnev.Text.Length, 0);
                 VarosadatokKitoltve();
             }
+        }
+
+        private void button_Latvanyossagok_form_view_MouseEnter(object sender, EventArgs e)
+        {
+            button_Latvanyossagok_form_view.BackColor = Color.LightPink;
+            button_Latvanyossagok_form_view.FlatStyle = FlatStyle.Flat;
+            button_Latvanyossagok_form_view.FlatAppearance.BorderColor = Color.Red;
+            button_Latvanyossagok_form_view.FlatAppearance.BorderSize = 1;
+        }
+
+        private void button_Latvanyossagok_form_view_MouseLeave(object sender, EventArgs e)
+        {
+            button_Latvanyossagok_form_view.BackColor = Color.LightGreen;
+            button_Latvanyossagok_form_view.FlatStyle = FlatStyle.Flat;
+            button_Latvanyossagok_form_view.FlatAppearance.BorderColor = Color.Green;
+            button_Latvanyossagok_form_view.FlatAppearance.BorderSize = 1;
+
         }
     }
 }
